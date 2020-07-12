@@ -57,6 +57,7 @@ GEM
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
     ast (2.4.1)
+    bcrypt (3.1.13)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -69,10 +70,15 @@ GEM
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    graphiql-rails (1.7.0)
+      railties
+      sprockets-rails
+    graphql (1.11.1)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
     jaro_winkler (1.5.4)
+    jwt (2.2.1)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -199,8 +205,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
+  graphiql-rails
+  graphql
+  jwt
   listen (~> 3.2)
   overcommit
   pg (>= 0.18, < 2.0)
