@@ -5,4 +5,6 @@ AllCops:
   Exclude:
     - 'bin/**'
     - 'config/**/**'
-  
+
+Style/FrozenStringLiteralComment:
+  Enabled: true

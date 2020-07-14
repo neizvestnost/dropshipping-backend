@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Auth::JwtWebToken
   SECRET_KEY = Rails.application.secrets.secret_key_base
 
