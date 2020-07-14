@@ -7,7 +7,7 @@ module Extensions
     end
 
     def authenticate_user
-      raise GraphQL::ExecutionError, I18n.t('auth.errors.authenticate') unless user_sign_in?
+      raise GraphQL::ExecutionError, I18n.t('.auth.errors.authenticate') unless user_sign_in?
     end
 
     def current_user

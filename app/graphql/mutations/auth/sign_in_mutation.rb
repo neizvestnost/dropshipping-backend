@@ -11,10 +11,10 @@ module Mutations
 
       def resolve(**args)
         @user = User.find_by(email: args[:email])
-        raise GraphQL::ExecutionError, I18n.t('auth.sign_in.errors.user_not_found') if @user.blank?
+        raise GraphQL::ExecutionError, I18n.t('.auth.sign_in.errors.user_not_found') if @user.blank?
 
         unless @user.authenticate(args[:password])
-          raise GraphQL::ExecutionError, I18n.t('auth.sign_in.errors.user_not_found')
+          raise GraphQL::ExecutionError, I18n.t('.auth.sign_in.errors.incorrect_password')
         end
 
         token = ::Auth::JwtWebToken.encode({ user_id: @user.id })
