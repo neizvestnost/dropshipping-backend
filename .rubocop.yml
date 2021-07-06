@@ -1,0 +1,10 @@
+inherit_from:
+  - .rubocop_airbnb.yml
+
+AllCops:
+  Exclude:
+    - 'bin/**'
+    - 'config/**/**'
+
+Style/FrozenStringLiteralComment:
+  Enabled: true

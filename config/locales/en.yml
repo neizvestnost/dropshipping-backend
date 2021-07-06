@@ -30,4 +30,14 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  auth:
+    sign_in:
+      errors:
+        user_not_found: "No such user with given email"
+        incorrect_password: "Incorrect password"
+    sign_up:
+      errors:
+        user_exists: "User with this email already exists"
+    errors:
+      authenticate: "You must login"
+
